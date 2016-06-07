@@ -9,8 +9,8 @@ info:
   x-21-category: utilities
   x-21-app-image: 'https://cdn.filestackcontent.com/tEZC9LbjSAy6DPSGYPVt'
   x-21-total-price:
-    min: 5
-    max: 5
+    min: 2
+    max: 2
   contact:
     name: 'Beau Cronin'
     email: beau@21.co

@@ -13,7 +13,7 @@ wallet = Wallet()
 payment = Payment(app, wallet)
 
 @app.route('/<format>/<destination>')
-@payment.required(5)
+@payment.required(2)
 def get(format, destination):
     print(format)
     print(destination)
@@ -32,6 +32,6 @@ def docs():
     with open('manifest.yaml', 'r') as f:
         manifest_yaml = yaml.load(f)
     return json.dumps(manifest_yaml)
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
