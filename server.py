@@ -15,6 +15,8 @@ payment = Payment(app, wallet)
 @app.route('/<format>/<destination>')
 @payment.required(5)
 def get(format, destination):
+    print(format)
+    print(destination)
     url = 'http://localhost:8080/{}/{}'.format(format, destination)
     r = requests.get(url)
     resp = Response()
