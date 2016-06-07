@@ -19,11 +19,19 @@ def get(format, destination):
     print(destination)
     url = 'http://localhost:8080/{}/{}'.format(format, destination)
     r = requests.get(url)
-    resp = Response()
     resp = Response(
         r.text if r.text else None,
         status = r.status_code)
     return resp
 
+@app.route('/manifest')
+def docs():
+    '''
+    Serves the app manifest to the 21 crawler.
+    '''
+    with open('manifest.yaml', 'r') as f:
+        manifest_yaml = yaml.load(f)
+    return json.dumps(manifest_yaml)
+    
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
