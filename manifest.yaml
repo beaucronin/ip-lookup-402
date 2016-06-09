@@ -5,7 +5,7 @@ info:
   description: IP and host locations
   termsOfService: "https://opensource.org/licenses/MIT"
   x-21-usage: "Send GET request to server to get location information for an IP"
-  x-21-quick-buy: "21 buy url http://10.244.182.5:5000/json/1.2.3.4"
+  x-21-quick-buy: '21 buy url "https:mkt.21.co/beau21/ip_location_lookup/json/1.2.3.4"'
   x-21-category: utilities
   x-21-app-image: 'https://cdn.filestackcontent.com/tEZC9LbjSAy6DPSGYPVt'
   x-21-total-price:
